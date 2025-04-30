@@ -1,0 +1,15 @@
+# OpenAI API Configuration
+OPENAI_API_KEY=your_api_key_here
+
+# Server Configuration
+PORT=8000
+HOST=0.0.0.0
+
+# Environment
+ENVIRONMENT=development
+
+# CORS Configuration
+ALLOWED_ORIGINS=http://localhost:3000
+
+# Logging Configuration
+LOG_LEVEL=info 
