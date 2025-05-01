@@ -84,7 +84,7 @@ const Chatbot = ({ onNewMessage }: ChatbotProps) => {
     onNewMessage?.();
 
     try {
-      const response = await fetch('http://localhost:8000/api/chat', {
+      const response = await fetch('http://localhost:8080/api/chat', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -135,7 +135,7 @@ const Chatbot = ({ onNewMessage }: ChatbotProps) => {
   const handleGeneratePractice = async () => {
     setIsTyping(true);
     try {
-      const response = await fetch('http://localhost:8000/api/generate-practice', {
+      const response = await fetch('http://localhost:8080/api/generate-practice', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

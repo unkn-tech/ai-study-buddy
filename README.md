@@ -1,40 +1,69 @@
-# StudyBuddy 🤖📚
+# AI Study Buddy Setup Guide
 
-Hey there! Welcome to StudyBuddy - your AI-powered study companion! This project helps students study smarter with the help of artificial intelligence. Whether you need help with practice questions, explanations, or just want a study buddy to chat with, we've got you covered!
+## Project Overview
+This is an AI-powered study assistant application with features including:
+- Study sessions with timer
+- Notes management
+- Todo list
+- Session statistics
+- Motivational quotes
 
-## What's Inside? 🎁
+## Setup Instructions
 
-- **AI Chat Assistant**: Get instant help with your study questions
-- **Practice Questions**: Generate custom practice questions for any subject
-- **Smart Flashcards**: Create and study with AI-generated flashcards
-- **Study Timer**: Track your study sessions and stay focused
-- **Notes**: Keep all your study notes in one place
+### Frontend Setup
+1. Navigate to the frontend directory:
+   ```
+   cd frontend
+   ```
 
-## Quick Start 🚀
+2. Install dependencies:
+   ```
+   npm install @mui/x-date-pickers date-fns --legacy-peer-deps
+   ```
 
-### 1. Get the Code
-```bash
-git clone https://github.com/BHANU063/Ai-Powered-Study-Buddy.git
-cd Ai-Powered-Study-Buddy
-```
+3. Start the frontend server:
+   ```
+   npm run dev -- --port 3002
+   ```
+   Note: If port 3002 is in use, the server will automatically use the next available port.
 
-### 2. Set Up the Backend
-```bash
-cd backend
-python -m venv .venv
-source .venv/bin/activate  # On Windows: .venv\Scripts\activate
-pip install -r requirements.txt
-```
+### Backend Setup
+1. Navigate to the backend directory:
+   ```
+   cd backend
+   ```
 
-### 3. Set Up the Frontend
-```bash
-cd frontend
-npm install
-```
+2. Install Python dependencies:
+   ```
+   pip install python-dotenv
+   ```
 
-### 4. Start Both Servers
-- Backend: `python main.py`
-- Frontend: `npm run dev`
+3. Start the backend server:
+   ```
+   mvnw spring-boot:run
+   ```
+
+### Quick Start
+To start both servers with one click:
+1. Double-click `start_study_buddy.bat`
+2. Wait for both servers to start
+3. Access the application at:
+   - Frontend: http://localhost:3002 (or the port shown in the terminal)
+   - Backend: http://localhost:8080
+
+## Troubleshooting
+- If ports are in use, the frontend will automatically use the next available port
+- Make sure all dependencies are installed before starting the servers
+- Check the terminal output for any error messages
+
+## Features
+- Study session tracking
+- Timer functionality
+- Notes management
+- Todo list
+- Session statistics
+- Motivational quotes
+- Modern UI with dark theme
 
 ## For Contributors 👩‍💻👨‍💻
 

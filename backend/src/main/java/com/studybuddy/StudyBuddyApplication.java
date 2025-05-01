@@ -20,7 +20,6 @@ public class StudyBuddyApplication {
                 registry.addMapping("/**")
                     .allowedOrigins("http://localhost:3002")
                     .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
-                    .allowedHeaders("*")
                     .allowCredentials(true);
             }
         };
