@@ -73,11 +73,4 @@ git merge upstream/main
 - Keep your pull requests focused on one feature/fix
 - Ask for help if you need it!
 
-## Need Help? 🤝
-- Create an issue if you find a bug
-- Ask questions in the discussions
-- Contact the team members:
-  - Bhanu Reddy Mallavarapu (Project Lead)
-  - BhavKirat Kaur (Contributor)
-
 Happy coding! 🎉 
