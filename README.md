@@ -1,111 +1,174 @@
-# AI Study Buddy Setup Guide
+# 📚 Study Buddy — AI-Powered Personalized Learning Assistant
 
-## Project Overview
-This is an AI-powered study assistant application with features including:
-- Study sessions with timer
-- Notes management
-- Todo list
-- Session statistics
-- Motivational quotes
+Study Buddy is an AI-powered academic assistance platform designed to help students organize their learning, understand academic concepts, and track their study progress in one place.
 
-## Setup Instructions
+The project aims to make studying more interactive and personalized through AI-assisted question answering, quiz generation, flashcards, study notes, and productivity tools.
 
-### Frontend Setup
-1. Navigate to the frontend directory:
-   ```
-   cd frontend
-   ```
+## ✨ Features
 
-2. Install dependencies:
-   ```
-   npm install @mui/x-date-pickers date-fns --legacy-peer-deps
-   ```
+* **AI Academic Assistant:** Get assistance with academic questions and concepts.
+* **PDF-Based Learning:** Use uploaded study materials to support contextual question answering.
+* **Quiz Generation:** Generate quizzes to practice and evaluate understanding.
+* **Flashcards:** Create flashcards for revision and memorization.
+* **Study Notes:** Organize important academic information.
+* **Pomodoro Timer:** Manage study sessions and breaks.
+* **Motivational Quotes:** Stay encouraged during study sessions.
+* **Progress Tracking:** Monitor learning activities and academic progress.
+* **Interactive Dashboard:** Access learning tools through a centralized interface.
 
-3. Start the frontend server:
-   ```
-   npm run dev -- --port 3002
-   ```
-   Note: If port 3002 is in use, the server will automatically use the next available port.
+*Feature availability depends on the current implementation of the project.*
 
-### Backend Setup
-1. Navigate to the backend directory:
-   ```
-   cd backend
-   ```
+## 🛠️ Technologies Used
 
-2. Install Python dependencies:
-   ```
-   pip install python-dotenv
-   ```
+| Component                      | Technologies                      |
+| ------------------------------ | --------------------------------- |
+| Frontend                       | React.js, JavaScript, HTML5, CSS3 |
+| Frontend Build Tool            | Vite                              |
+| Backend                        | Python, Flask                     |
+| Database                       | MySQL                             |
+| API Communication              | REST APIs                         |
+| AI Integration                 | Large Language Models (LLMs)      |
+| Retrieval-Augmented Generation | RAG, embeddings, LangChain        |
+| PDF Processing                 | PyPDF                             |
+| Version Control                | Git and GitHub                    |
+| API Testing                    | Postman                           |
 
-3. Start the backend server:
-   ```
-   mvnw spring-boot:run
-   ```
+## 🏗️ Project Architecture
 
-### Quick Start
-To start both servers with one click:
-1. Double-click `start_study_buddy.bat`
-2. Wait for both servers to start
-3. Access the application at:
-   - Frontend: http://localhost:3002 (or the port shown in the terminal)
-   - Backend: http://localhost:8080
+Study Buddy follows a frontend-backend architecture.
 
-## Troubleshooting
-- If ports are in use, the frontend will automatically use the next available port
-- Make sure all dependencies are installed before starting the servers
-- Check the terminal output for any error messages
+1. **Frontend:** Provides the user interface for interacting with learning tools.
+2. **Backend:** Uses Flask to handle application logic and REST API requests.
+3. **Database:** MySQL stores supported application data, such as user information and learning activities.
+4. **AI Layer:** LLMs and RAG can be used to generate contextual responses from relevant academic materials.
+5. **PDF Processing:** Extracts text from uploaded PDF notes for academic assistance.
 
-## Features
-- Study session tracking
-- Timer functionality
-- Notes management
-- Todo list
-- Session statistics
-- Motivational quotes
-- Modern UI with dark theme
+## 📁 Project Structure
 
-## For Contributors 👩‍💻👨‍💻
+The frontend currently uses React and Vite. The repository structure may evolve as the backend and AI services are integrated.
 
-Want to help make StudyBuddy even better? Here's how you can contribute:
+```text
+study-buddy/
+├── public/
+├── src/
+│   ├── App.jsx
+│   ├── App.css
+│   └── main.jsx
+├── index.html
+├── package.json
+├── package-lock.json
+├── vite.config.js
+├── .gitignore
+└── README.md
+```
 
-1. **Fork the Repository**
-   - Click the "Fork" button at the top right of this page
-   - This creates your own copy of the project
+The backend can be organized separately as development progresses:
 
-2. **Create a New Branch**
-   ```bash
-   git checkout -b feature/your-awesome-feature
-   ```
+```text
+backend/
+├── app.py
+├── requirements.txt
+├── routes/
+├── services/
+└── database/
+```
 
-3. **Make Your Changes**
-   - Write your code
-   - Test it thoroughly
-   - Make sure it works!
+## 🚀 Getting Started
 
-4. **Share Your Work**
-   ```bash
-   git add .
-   git commit -m "Add your awesome feature"
-   git push origin feature/your-awesome-feature
-   ```
+### Prerequisites
 
-5. **Create a Pull Request**
-   - Go to your forked repository
-   - Click "New Pull Request"
-   - Describe your changes
-   - Submit and wait for review!
+Install the following tools before running the application:
 
-## Need Help? 🤝
+* Node.js and npm
+* Python 3
+* MySQL, if using the database-backed features
 
-- Found a bug? Create an issue!
-- Have a question? Ask in the discussions!
-- Want to chat? Join our community!
+### 1. Clone the Repository
 
-## License 📄
+```bash
+git clone https://github.com/unkn-tech/study-buddy.git
+```
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+Navigate into the project directory:
 
----
+```bash
+cd study-buddy
+```
 
-Made with ❤️ by students, for students. Happy studying! 📚✨ 
+### 2. Install Frontend Dependencies
+
+```bash
+npm install
+```
+
+### 3. Run the Frontend
+
+```bash
+npm run dev
+```
+
+Open the local address displayed in your terminal, usually:
+
+```text
+http://localhost:5173
+```
+
+### 4. Backend Setup
+
+Once the Flask backend is available, create and activate a Python virtual environment.
+
+On Windows:
+
+```powershell
+python -m venv .venv
+.venv\Scripts\Activate.ps1
+```
+
+Install the backend dependencies listed in `requirements.txt`:
+
+```bash
+pip install -r requirements.txt
+```
+
+Configure the required database settings and environment variables before starting the Flask application.
+
+*The backend setup instructions will need to be adjusted to match the actual backend files and configuration.*
+
+## 🔐 Security Considerations
+
+* Store API keys and database credentials in environment variables.
+* Never commit `.env` files containing secrets.
+* Use appropriate password hashing for user authentication.
+* Validate user input and uploaded files.
+* Apply suitable access controls to protected API endpoints.
+* Handle uploaded academic documents securely.
+
+## 🎯 Project Objectives
+
+* Make academic assistance more accessible and interactive.
+* Support personalized learning through AI-assisted tools.
+* Simplify revision using quizzes and flashcards.
+* Help students organize study sessions and learning activities.
+* Explore the application of LLMs and RAG in educational technology.
+
+## 🔮 Future Enhancements
+
+* Improved personalization based on learning history.
+* More advanced academic document retrieval.
+* Additional learning analytics and visualizations.
+* Improved authentication and user-specific dashboards.
+* Deployment of the application for wider access.
+
+## 👩‍💻 Author
+
+**Bhavkirat Kaur Khurana**
+
+* GitHub: [unkn-tech](https://github.com/unkn-tech)
+
+## 📌 Project Status
+
+Study Buddy is under development. Features, integrations, and architecture may change as implementation progresses.
+
+## 📄 License
+
+A license has not yet been specified for this project.
