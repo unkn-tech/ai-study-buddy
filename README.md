@@ -102,11 +102,6 @@ Want to help make StudyBuddy even better? Here's how you can contribute:
 - Have a question? Ask in the discussions!
 - Want to chat? Join our community!
 
-## Meet the Team 👋
-
-- Bhanu Reddy Mallavarapu (Project Lead)
-- BhavKirat Kaur (Contributor)
-
 ## License 📄
 
 This project is licensed under the MIT License - see the LICENSE file for details.
